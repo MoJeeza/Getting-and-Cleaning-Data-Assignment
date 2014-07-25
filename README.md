@@ -21,14 +21,24 @@ Peer Assignment for Getting and Cleaning Data - Course Project
 I have submitted five files to the github repo at the following URL:
 https://github.com/MoJeeza/Getting-and-Cleaning-Data-Assignment.git
 
-1) CodeBook.md	   (code book explaining the experiment and it's variables and observations)
-2) Readme.md	   (this document - explaining the process and the environment and script execution requirements)
-3) run_analysis.R  (the R script to produce the tidy data set from the supplied raw data and other files)
-4) Tidy_Set_Q5_table.txt (the final tidy dataset - in table text format)
-5) Tidy_Set_Q5.csv	 (the final tidy dataset - in csv format)
+1) CodeBook.md	    (code book explaining the experiment and it's variables and observations)
+2) Readme.md	      (this document - explaining the process of creating a tidy dataset required for the assignment
+                    and the environment and script execution requirements)
+3) run_analysis.R   (the R script to produce the tidy data set from the supplied raw data and other files)
+4) Tidy_Set_Q5_table.txt  (the final tidy dataset - in table text format)
+5) Tidy_Set_Q5.csv        (the final tidy dataset - in csv format)
 
 
 ###################################################################################################
+
+Introduction:
+Beofre running the run_analysis.R script - PLEASE NOTE: The script assumes the existance of E:\ drive on windows machine.
+If you are not going to run in a Windows env then please update the following variables in the script to meet the drive specification or operating system requirements:
+
+asnmt_wd  <- this is the assignment working directory
+
+The run_analysis.R script is the only thing required to create a tidy data set for this assignment. It's a self contained script that will do everything for you. The file can be placed in any directory of any of the storage devices. 
+
 Reading the tidy data set:
 
 The file Tidy_Set_Q5_table.txt was creating using the write.table function and so can easily be read
