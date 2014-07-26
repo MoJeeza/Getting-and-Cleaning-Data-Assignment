@@ -9,8 +9,8 @@ The data for this assignment was part of an experiment, details of which can be 
 The data was downloaded from the following: [Data Source ](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
 
 
-###Original Variable Names     |Revised Descriptive Variable Names(with column #'s)
--------------------------------|---------------------------------
+Original Variable Names     	|Revised Descriptive Variable Names(with column #'s)
+--------------------------------|-----------------------------------------
 1 tBodyAcc-mean()-X		   |		TimeBodyAcc-Mean-X
 2 tBodyAcc-mean()-Y		   |		TimeBodyAcc-Mean-Y
 3 tBodyAcc-mean()-Z		   |		TimeBodyAcc-Mean-Z
