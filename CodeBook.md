@@ -26,7 +26,7 @@ Original dataset
 
 
 Column position in original dataset | Original Variable Names(with column #'s)     	|Revised Descriptive Variable Names
---------------------------------|-----------------------------------------
+--------------------|--------------------------------|-----------------------------------------
 1 |		tBodyAcc-mean()-X		   |		TimeBodyAcc-Mean-X
 2 |		tBodyAcc-mean()-Y		   |		TimeBodyAcc-Mean-Y
 3 |		tBodyAcc-mean()-Z		   |		TimeBodyAcc-Mean-Z
