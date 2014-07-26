@@ -10,34 +10,21 @@ The data was downloaded from the following: [Data Source ](https://d396qusza40or
 
 
 ###Original Variable Names     |Revised Descriptive Variable Names
-                                        (with column #'s)
+                               |         (with column #'s)
 -------------------------------|---------------------------------
-1. 1 tBodyAcc-mean()-X					TimeBodyAcc-Mean-X
-2. -------------------------------|---------------------------------
-1. 2 tBodyAcc-mean()-Y					TimeBodyAcc-Mean-Y
-2. -------------------------------|---------------------------------
-1. 3 tBodyAcc-mean()-Z					TimeBodyAcc-Mean-Z
-2. -------------------------------|---------------------------------
-1. 4 tBodyAcc-std()-X					TimeBodyAcc-Std-X
-2. -------------------------------|---------------------------------
-1. 5 tBodyAcc-std()-Y					TimeBodyAcc-Std-Y
-2. -------------------------------|---------------------------------
-1. 6 tBodyAcc-std()-Z					TimeBodyAcc-Std-Z
-2. -------------------------------|---------------------------------
+1. 1 tBodyAcc-mean()-X		   |		TimeBodyAcc-Mean-X
+21. 2 tBodyAcc-mean()-Y		   |		TimeBodyAcc-Mean-Y
+1. 3 tBodyAcc-mean()-Z		   |		TimeBodyAcc-Mean-Z
+1. 4 tBodyAcc-std()-X		   |		TimeBodyAcc-Std-X
+1. 5 tBodyAcc-std()-Y		   |		TimeBodyAcc-Std-Y
+1. 6 tBodyAcc-std()-Z		   |		TimeBodyAcc-Std-Z
 1. 41 tGravityAcc-mean()-X				TimeGravityAcc-Mean-X
-2. -------------------------------|---------------------------------
 1. 42 tGravityAcc-mean()-Y				TimeGravityAcc-Mean-Y
-2. -------------------------------|---------------------------------
 1. 43 tGravityAcc-mean()-Z				TimeGravityAcc-Mean-Z
-2. -------------------------------|---------------------------------
 1. 44 tGravityAcc-std()-X				TimeGravityAcc-Std-X
--------------------------------|---------------------------------
 1. 45 tGravityAcc-std()-Y				TimeGravityAcc-Std-Y
-2. -------------------------------|---------------------------------
 1. 46 tGravityAcc-std()-Z				TimeGravityAcc-Std-Z
--------------------------------|---------------------------------
 1. 81 tBodyAccJerk-mean()-X				TimeBodyAccJerk-Mean-X
--------------------------------|---------------------------------
 1. 82 tBodyAccJerk-mean()-Y				TimeBodyAccJerk-Mean-Y
 1. 83 tBodyAccJerk-mean()-Z				TimeBodyAccJerk-Mean-Z
 1. 84 tBodyAccJerk-std()-X				TimeBodyAccJerk-Std-X
