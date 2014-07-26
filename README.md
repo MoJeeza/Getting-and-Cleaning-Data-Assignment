@@ -19,8 +19,7 @@ https://github.com/MoJeeza/Getting-and-Cleaning-Data-Assignment.git
 Item # | File Name	             | Description
 -------|-------------------------|------------------------------------------------
 1)     | CodeBook.md	         | (code book explaining the experiment and it's variables and observations)
-2)     | Readme.md	             |  (this document - explaining the process of creating a tidy dataset required for the assignment
-                    and the environment and script execution requirements)
+2)     | Readme.md	             |  (this document - explaining the process of creating a tidy dataset required for the assignment and the environment and script execution requirements)
 3)     | run_analysis.R          |(the R script to produce the tidy data set from the supplied raw data and other files)
 4)     | Tidy_Set_Q5_table.txt   | (the final tidy dataset - in table text format)
 5)     | Tidy_Set_Q5.csv         | (the final tidy dataset - in csv format)
