@@ -9,12 +9,89 @@ Peer Assignment for Getting and Cleaning Data - Course Project
 
 
 ####	Name:		Mohsin Jessa
-####	Date:		24-Jul-2014 V1.3
+####	Date:		24-Jul-2014 V1.4
 ####	Course:		Getting and Cleaning Data
 ####	Project: 	Peer review and course assignment
 
-I have submitted five files to the github repo at the following URL:
-https://github.com/MoJeeza/Getting-and-Cleaning-Data-Assignment.git
+
+
+
+Human Activity Recognition Using Smartphones Dataset
+==================================================================
+Version 1.0
+==================================================================
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+==================================================================
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+For each record it is provided:
+======================================
+
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+The dataset includes the following files:
+=========================================
+
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+The following files are available for the train and test data. Their descriptions are equivalent. 
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+
+- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+
+- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+Notes: 
+======
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
+
+For more information about this dataset contact: activityrecognition@smartlab.ws
+
+License:
+========
+Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+
+Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+
+
+
+# Assignment specific information:
+
+I have submitted the following five files to the github repo at the following URL: https://github.com/MoJeeza/Getting-and-Cleaning-Data-Assignment.git
 
 Item # | File Name	             | Description
 -------|-------------------------|------------------------------------------------
@@ -51,7 +128,6 @@ all activity codes by the test volunteers are recorded in the test_y files
 all observations of the training volunteers are recorded in the train_X
 all activity codes by the training volunteers are recorded in the train_y files
 
-
 activity codes and their description are given in the activity_labels.txt file
 1 WALKING
 2 WALKING_UPSTAIRS
@@ -62,34 +138,23 @@ activity codes and their description are given in the activity_labels.txt file
 
 
 
-
-# of observations in the train_(X and y) files matches the # of observations in the subject_train file
-likewise
-# of observations in the test_(X and y) files matches that in the subject_test file
-
-
-in R-Studio
-
-test_count = subject_test.txt  = id's of the test volunteers (9 unique values) stored in test_id
-train_count = subject_train.txt = id's of the training volunteers (21 unique values) stored in train_id
-
-test_X = experiment data for all test volunteers
-train_X = experiment data for all training volunteers
-
-test_Y = activity codes for all test volunteers
-train_Y = training activity codes for all training volunteers
+Pre-processing checks
+======================
+To confirm the validity of data, I checked that # of observations in the train_(X and y).txt files matched the # of observations in the subject_train.txt file. Likewise # of observations in the test_(X and y) files matched that in the subject_test.txt file
 
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#
+### These files are required by the run_analysis.R script and are part of the zip file downloaded from the source.
 
-For each record in the dataset it is provided: 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
-
-
+Directory	| File Name		| Description
+------------|---------------|--------------------------
+UCI HAR Dataset | 'features.txt'| List of all features.
+UCI HAR Dataset | 'activity_labels.txt': Links the class labels with their activity name.
+UCI HAR Dataset\train | 'X_train.txt'| Training set.
+UCI HAR Dataset\train | 'y_train.txt'| Training labels.
+UCI HAR Dataset\train | 'subject_train.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+UCI HAR Dataset\test | 'X_test.txt' | Test set.
+UCI HAR Dataset\test | 'y_test.txt' | Test labels.
+UCI HAR Dataset\test | 'subject_test.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 
 # run_analysis.R script
