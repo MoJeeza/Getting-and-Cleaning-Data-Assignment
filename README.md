@@ -125,16 +125,16 @@ Similarly the activity codes were verified to be between the values of 1 and 6.
 
 ### The following files are required by the run_analysis.R script and are part of the zip file downloaded from the source of dataset.
 
-Directory   	           | File Name 	   | Description
----------------------------|---------------|--------------------------
-UCI HAR Dataset         | 'features.txt'| List of all features.
-UCI HAR Dataset         | 'activity_labels.txt' | Links the class labels with their activity name.
-UCI HAR Dataset\train   | 'X_train.txt'| Training set.
-UCI HAR Dataset\train   | 'y_train.txt'| Training labels.
-UCI HAR Dataset\train   | 'subject_train.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-UCI HAR Dataset\test    | 'X_test.txt' | Test set.
-UCI HAR Dataset\test    | 'y_test.txt' | Test labels.
-UCI HAR Dataset\test    | 'subject_test.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+Directory   	            | File Name 	   | Description
+--------------------------- |---------------|--------------------
+UCI HAR Dataset             | 'features.txt'| List of all features.
+UCI HAR Dataset             | 'activity_labels.txt' | Links the class labels with their activity name.
+UCI HAR Dataset\train       | 'X_train.txt'| Training set.
+UCI HAR Dataset\train       | 'y_train.txt'| Training labels.
+UCI HAR Dataset\train       | 'subject_train.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+UCI HAR Dataset\test        | 'X_test.txt' | Test set.
+UCI HAR Dataset\test        | 'y_test.txt' | Test labels.
+UCI HAR Dataset\test        | 'subject_test.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 
 # Execution of run_analysis.R script
