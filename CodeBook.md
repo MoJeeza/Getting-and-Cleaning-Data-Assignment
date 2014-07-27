@@ -850,73 +850,73 @@ Tidy`_`Set`_`Q5 - Final Submission of Tidy Data Set for Assignment
 
 ####Variables defined in the **Tidy`_`Set`_`Q5** dataframe:
 
-Column #    | Variable Name      |  Values or EXplanation
-------------|--------------------|------------------------
-1	| VolunteerID	|	Range of values between 1-30
-2	| ActivityName	|	Code values between 1-6. Description as explained in the file activity_labels.txt
-3	| TimeBodyAcc-Mean-X	| The rest of the values are the mean values for all observations for a given participant for each activity he performed.
-4	| TimeBodyAcc-Mean-Y	|
-5	| TimeBodyAcc-Mean-Z	|
-6	| TimeBodyAcc-Std-X		|
-7	| TimeBodyAcc-Std-Y		|
-8	| TimeBodyAcc-Std-Z		|
-9	| TimeGravityAcc-Mean-X	|
-10	| TimeGravityAcc-Mean-Y	|
-11	| TimeGravityAcc-Mean-Z	|
-12	| TimeGravityAcc-Std-X	|
-13	| TimeGravityAcc-Std-Y	|
-14	| TimeGravityAcc-Std-Z	|
-15	| TimeBodyAccJerk-Mean-X	|
-16	| TimeBodyAccJerk-Mean-Y	|
-17	| TimeBodyAccJerk-Mean-Z	|
-18	| TimeBodyAccJerk-Std-X		|
-19	| TimeBodyAccJerk-Std-Y		|
-20	| TimeBodyAccJerk-Std-Z		|
-21	| TimeBodyGyro-Mean-X		|
-22	| TimeBodyGyro-Mean-Y		|
-23	| TimeBodyGyro-Mean-Z		|
-24	| TimeBodyGyro-Std-X		|
-25	| TimeBodyGyro-Std-Y		|
-26	| TimeBodyGyro-Std-Z		|
-27	| TimeBodyGyroJerk-Mean-X	|
-28	| TimeBodyGyroJerk-Mean-Y	|
-29	| TimeBodyGyroJerk-Mean-Z	|
-30	| TimeBodyGyroJerk-Std-X	|
-31	| TimeBodyGyroJerk-Std-Y	|
-32	| TimeBodyGyroJerk-Std-Z	|
-33	| TimeBodyAccMag-Mean		|
-34	| TimeBodyAccMag-Std		|
-35	| TimeGravityAccMag-Mean	|
-36	| TimeGravityAccMag-Std		|
-37	| TimeBodyAccJerkMag-Mean	|
-38	| TimeBodyAccJerkMag-Std	|
-39	| TimeBodyGyroMag-Mean		|
-40	| TimeBodyGyroMag-Std		|
-41	| TimeBodyGyroJerkMag-Mean	|
-42	| TimeBodyGyroJerkMag-Std	|
-43	| FreqBodyAcc-Mean-X		|
-44	| FreqBodyAcc-Mean-Y		|
-45	| FreqBodyAcc-Mean-Z		|
-46	| FreqBodyAcc-Std-X			|
-47	| FreqBodyAcc-Std-Y			|
-48	| FreqBodyAcc-Std-Z			|
-49	| FreqBodyAccJerk-Mean-X	|
-50	| FreqBodyAccJerk-Mean-Y	|
-51	| FreqBodyAccJerk-Mean-Z	|
-52	| FreqBodyAccJerk-Std-X		|
-53	| FreqBodyAccJerk-Std-Y		|
-54	| FreqBodyAccJerk-Std-Z		|
-55	| FreqBodyGyro-Mean-X		|
-56	| FreqBodyGyro-Mean-Y		|
-57	| FreqBodyGyro-Mean-Z		|
-58	| FreqBodyGyro-Std-X		|
-59	| FreqBodyGyro-Std-Y		|
-60	| FreqBodyGyro-Std-Z		|
-61	| FreqBodyAccMag-Mean		|
-62	| FreqBodyAccMag-Std		|
-63	| FreqBodyAccJerkMag-Mean	|
-64	| FreqBodyAccJerkMag-Std	|
-65	| FreqBodyGyroMag-Mean		|
-66	| FreqBodyGyroMag-Std		|
-67	| FreqBodyGyroJerkMag-Mean	|
-68	| FreqBodyGyroJerkMag-Std	|
+Column #    | Variable Name        |  Values or EXplanation
+------------|----------------------|------------------------
+1	| VolunteerID	           |	Range of values between 1-30
+2	| ActivityName	           |	Code values between 1-6. Description as explained in the file activity_labels.txt
+3	| TimeBodyAcc-Mean-X	       | The rest of the values are the mean values for all observations for a given participant for each activity he performed.
+4	| TimeBodyAcc-Mean-Y	   |
+5	| TimeBodyAcc-Mean-Z	   |
+6	| TimeBodyAcc-Std-X		   |
+7	| TimeBodyAcc-Std-Y		   |
+8	| TimeBodyAcc-Std-Z		   |
+9	| TimeGravityAcc-Mean-X	   |
+10	| TimeGravityAcc-Mean-Y	   |
+11	| TimeGravityAcc-Mean-Z	   |
+12	| TimeGravityAcc-Std-X	   |
+13	| TimeGravityAcc-Std-Y	   |
+14	| TimeGravityAcc-Std-Z	   |
+15	| TimeBodyAccJerk-Mean-X	 |
+16	| TimeBodyAccJerk-Mean-Y	 |
+17	| TimeBodyAccJerk-Mean-Z	 |
+18	| TimeBodyAccJerk-Std-X		 |
+19	| TimeBodyAccJerk-Std-Y		 |
+20	| TimeBodyAccJerk-Std-Z		 |
+21	| TimeBodyGyro-Mean-X		 |
+22	| TimeBodyGyro-Mean-Y		 |
+23	| TimeBodyGyro-Mean-Z		 |
+24	| TimeBodyGyro-Std-X		 |
+25	| TimeBodyGyro-Std-Y		 |
+26	| TimeBodyGyro-Std-Z		 |
+27	| TimeBodyGyroJerk-Mean-X	 |
+28	| TimeBodyGyroJerk-Mean-Y	 |
+29	| TimeBodyGyroJerk-Mean-Z	 |
+30	| TimeBodyGyroJerk-Std-X	 |
+31	| TimeBodyGyroJerk-Std-Y	 |
+32	| TimeBodyGyroJerk-Std-Z	 |
+33	| TimeBodyAccMag-Mean		 |
+34	| TimeBodyAccMag-Std		 |
+35	| TimeGravityAccMag-Mean	 |
+36	| TimeGravityAccMag-Std		 |
+37	| TimeBodyAccJerkMag-Mean	 |
+38	| TimeBodyAccJerkMag-Std	 |
+39	| TimeBodyGyroMag-Mean		 |
+40	| TimeBodyGyroMag-Std		 |
+41	| TimeBodyGyroJerkMag-Mean  	|
+42	| TimeBodyGyroJerkMag-Std	 |
+43	| FreqBodyAcc-Mean-X		 |
+44	| FreqBodyAcc-Mean-Y		 |
+45	| FreqBodyAcc-Mean-Z		 |
+46	| FreqBodyAcc-Std-X			 |
+47	| FreqBodyAcc-Std-Y			 |
+48	| FreqBodyAcc-Std-Z			 |
+49	| FreqBodyAccJerk-Mean-X	 |
+50	| FreqBodyAccJerk-Mean-Y	 |
+51	| FreqBodyAccJerk-Mean-Z	 |
+52	| FreqBodyAccJerk-Std-X		 |
+53	| FreqBodyAccJerk-Std-Y		 |
+54	| FreqBodyAccJerk-Std-Z		 |
+55	| FreqBodyGyro-Mean-X		 |
+56	| FreqBodyGyro-Mean-Y		 |
+57	| FreqBodyGyro-Mean-Z		 |
+58	| FreqBodyGyro-Std-X		 |
+59	| FreqBodyGyro-Std-Y		 |
+60	| FreqBodyGyro-Std-Z		 |
+61	| FreqBodyAccMag-Mean		 |
+62	| FreqBodyAccMag-Std		 |
+63	| FreqBodyAccJerkMag-Mean	 |
+64	| FreqBodyAccJerkMag-Std	 |
+65	| FreqBodyGyroMag-Mean		 |
+66	| FreqBodyGyroMag-Std		 |
+67	| FreqBodyGyroJerkMag-Mean  	|
+68	| FreqBodyGyroJerkMag-Std	 |
