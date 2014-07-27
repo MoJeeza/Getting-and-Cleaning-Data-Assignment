@@ -757,8 +757,9 @@ These variable names where then averaged for each activity performed by each vol
 
 ***The following table shows variables that were extracted from the original dataset (features.txt) and the X_train/test.txt files to complete the final part of this assignment***
 
-**Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names
-**--------------------|--------------------------------|-----------------------------------------
+
+**Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names**
+--------------------|--------------------------------|-----------------------------------------
 1 |		tBodyAcc-mean()-X		   |		TimeBodyAcc-Mean-X
 2 |		tBodyAcc-mean()-Y		   |		TimeBodyAcc-Mean-Y
 3 |		tBodyAcc-mean()-Z		   |		TimeBodyAcc-Mean-Z
@@ -846,8 +847,8 @@ Tidy`_`Set`_`Q5 - Final Submission of Tidy Data Set for Assignment
 
 ####Variables defined in the **Tidy`_`Set`_`Q5** dataframe:
 
-Column #    | Variable Name  |  Values or EXplanation
-------------|----------------|------------------------
+Column #    | Variable Name      |  Values or EXplanation
+------------|--------------------|------------------------
 1	| VolunteerID	|	Range of values between 1-30
 2	| ActivityName	|	Code values between 1-6. Description as explained in the file activity_labels.txt
 3	| TimeBodyAcc-Mean-X	| The rest of the values are the mean values for all observations for a given participant for each activity he performed.
