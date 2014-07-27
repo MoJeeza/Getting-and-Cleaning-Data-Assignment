@@ -1,7 +1,7 @@
 ####Document file name: CodeBook.md
 ####Author: 	Mohsin Jessa
 ####Date: 		July 24, 2014 
-####Version:	V1.6
+####Version:	V1.7
 
 **This code book describes the variable names, data transformations or other processing work that I performed in order to produce a tidy dataset for this assignment.**
 
@@ -690,54 +690,57 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
+
 These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+**'-XYZ'** is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+-	tBodyAcc-XYZ
+-	tGravityAcc-XYZ
+-	tBodyAccJerk-XYZ
+-	tBodyGyro-XYZ
+-	tBodyGyroJerk-XYZ
+-	tBodyAccMag
+-	tGravityAccMag
+-	tBodyAccJerkMag
+-	tBodyGyroMag
+-	tBodyGyroJerkMag
+-	fBodyAcc-XYZ
+-	fBodyAccJerk-XYZ
+-	fBodyGyro-XYZ
+-	fBodyAccMag
+-	fBodyAccJerkMag
+-	fBodyGyroMag
+-	fBodyGyroJerkMag
 
-The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+**The set of variables that were estimated from these signals are:** 
+
+-	**mean()**: Mean value
+-	**std()**: Standard deviation
+-	**mad()**: Median absolute deviation 
+-	**max()**: Largest value in array
+-	**min()**: Smallest value in array
+-	**sma()**: Signal magnitude area
+-	**energy()**: Energy measure. Sum of the squares divided by the number of values. 
+-	**iqr()**: Interquartile range 
+-	**entropy()**: Signal entropy
+-	**arCoeff()**: Autorregresion coefficients with Burg order equal to 4
+-	**correlation()**: correlation coefficient between two signals
+-	**maxInds()**: index of the frequency component with largest magnitude
+-	**meanFreq()**: Weighted average of the frequency components to obtain a mean frequency
+-	**skewness()**: skewness of the frequency domain signal 
+-	**kurtosis()**: kurtosis of the frequency domain signal 
+-	**bandsEnergy()**: Energy of a frequency interval within the 64 bins of the FFT of each window.
+-	**angle()**: Angle between to vectors.
+
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
+-	gravityMean
+-	tBodyAccMean
+-	tBodyAccJerkMean
+-	tBodyGyroMean
+-	tBodyGyroJerkMean
 
 
 
@@ -758,8 +761,8 @@ These variable names where then averaged for each activity performed by each vol
 ***The following table shows variables that were extracted from the original dataset (features.txt) and the X_train/test.txt files to complete the final part of this assignment***
 
 
-**Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names**
---------------------|--------------------------------|-----------------------------------------
+Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names
+--------------|--------------------------------|-----------------------------------------
 1 |		tBodyAcc-mean()-X		   |		TimeBodyAcc-Mean-X
 2 |		tBodyAcc-mean()-Y		   |		TimeBodyAcc-Mean-Y
 3 |		tBodyAcc-mean()-Z		   |		TimeBodyAcc-Mean-Z
