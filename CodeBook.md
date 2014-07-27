@@ -743,10 +743,6 @@ tBodyGyroJerkMean
 
 
 
-
-***The following table shows variables that were extracted from the original dataset (features.txt) and the X_train/test.txt files to complete the final part of this assignment from the original dataset.***
-
-
 #####For Part 2 of the assignment we were asked to " Extract only the measurements on the mean and standard deviation for each measurement. " 
 For that, the variables I selected were those with either "mean" or "std" mentioned in their names. The variable names were cleaned and made more readable by performing the following:
 -	removing all the "()"
@@ -758,10 +754,11 @@ For that, the variables I selected were those with either "mean" or "std" mentio
 
 These variable names where then averaged for each activity performed by each volunteer/subject. Since each volunteer performed all the activities (a total of 6 different activities) and there being 30 volunteers (21 training and 9 test volunteers) we ended up with a total of 180 observations in the final "tidy" version of the dataset.
 
-The "cleaned" variable names and their original form are shown in the table below.
 
-Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names
---------------------|--------------------------------|-----------------------------------------
+***The following table shows variables that were extracted from the original dataset (features.txt) and the X_train/test.txt files to complete the final part of this assignment***
+
+**Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names
+**--------------------|--------------------------------|-----------------------------------------
 1 |		tBodyAcc-mean()-X		   |		TimeBodyAcc-Mean-X
 2 |		tBodyAcc-mean()-Y		   |		TimeBodyAcc-Mean-Y
 3 |		tBodyAcc-mean()-Z		   |		TimeBodyAcc-Mean-Z
@@ -833,8 +830,8 @@ Column position in original dataset | Original Variable Names     	|Revised Desc
 
 In addition: Two new variables were introduced in the Tidy Data Set:
 
-- VolunteerID			Volunteer Identifying Number/Code. Unique number between 1 and 30 to identify each Volunteer (as provided in the raw data files y_test.txt and y_train.txt)
-- ActivityName			Description of Activity (as provided in the raw data file activity_labels.txt). 6 values between (1-6) with following description
+- **VolunteerID**			Volunteer Identifying Number/Code. Unique number between 1 and 30 to identify each Volunteer (as provided in the raw data files y_test.txt and y_train.txt)
+- **ActivityName**			Description of Activity (as provided in the raw data file activity_labels.txt). 6 values between (1-6) with following description
   - 1 WALKING
   - 2 WALKING_UPSTAIRS
   - 3 WALKING_DOWNSTAIRS
@@ -853,7 +850,7 @@ Column #    | Variable Name  |  Values or EXplanation
 ------------|----------------|------------------------
 1	| VolunteerID	|	Range of values between 1-30
 2	| ActivityName	|	Code values between 1-6. Description as explained in the file activity_labels.txt
-3	| TimeBodyAcc-Mean-X	|
+3	| TimeBodyAcc-Mean-X	| The rest of the values are the mean values for all observations for a given participant for each activity he performed.
 4	| TimeBodyAcc-Mean-Y	|
 5	| TimeBodyAcc-Mean-Z	|
 6	| TimeBodyAcc-Std-X		|
