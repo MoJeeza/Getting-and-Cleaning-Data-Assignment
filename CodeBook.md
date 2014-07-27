@@ -1,15 +1,32 @@
-####This document file name: CodeBook.md
-####Author: Mohsin Jessa
-####Date: July 24, 2014 V1.4
+####Document file name: CodeBook.md
+####Author: 	Mohsin Jessa
+####Date: 		July 24, 2014 
+####Version:	V1.5
 
-**This code book describes the variables, the data, and any transformations or work that I performed to clean up the data for this assignment.**
+**This code book describes the variable names, data transformations or other processing work that I performed in order to produce a tidy dataset for this assignment.**
 
-The data for this assignment was part of an experiment, details of which can be found [here.](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones )
+The data for this assignment was part of an experiment, details of which can be found [**here.**](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones )
 
-The data was downloaded from the following: [Data Source ](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
+The data was downloaded from the following: [**Data Source.** ](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
 
 
-##Activity Data:
+###Input data set:
+
+- activity_labels.txt
+- features.txt
+- subject_test.txt
+- subject_train.txt
+- X_test.txt
+- X_train.txt
+- y_test.txt
+- y_train.txt
+
+
+###Output Tidy Data: 
+- Tidy_Set_Q5_table.txt
+
+
+##Activity Data: (activity_labels.txt)
 
 Activity Code		| Activity Description/Name
 --------------------|----------------------------------
@@ -27,7 +44,7 @@ Activity Code		| Activity Description/Name
 
 ##Original dataset with all variable names and column position in the dataset
 
-####The complete list of variables of each feature vector is available provided below and is also in the 'features.txt' file.
+####The complete list of variables of each feature vector is provided below and is also available in the 'features.txt' file as part of the original dataset.
 
 
 column position | variable name
@@ -662,7 +679,7 @@ tBodyGyroJerkMean
 ***The following table shows variables that were extracted to complete the final part of this assignment from the original dataset.***
 
 
-Column position in original dataset | Original Variable Names(with column #'s)     	|Revised Descriptive Variable Names
+Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names
 --------------------|--------------------------------|-----------------------------------------
 1 |		tBodyAcc-mean()-X		   |		TimeBodyAcc-Mean-X
 2 |		tBodyAcc-mean()-Y		   |		TimeBodyAcc-Mean-Y
@@ -673,63 +690,63 @@ Column position in original dataset | Original Variable Names(with column #'s)  
 41 |	tGravityAcc-mean()-X		|		TimeGravityAcc-Mean-X
 42 |	tGravityAcc-mean()-Y		|		TimeGravityAcc-Mean-Y
 43 |	tGravityAcc-mean()-Z		|		TimeGravityAcc-Mean-Z
-44 |	tGravityAcc-std()-X		|		TimeGravityAcc-Std-X
-45 |	tGravityAcc-std()-Y		|		TimeGravityAcc-Std-Y
-46 |	tGravityAcc-std()-Z		|		TimeGravityAcc-Std-Z
+44 |	tGravityAcc-std()-X		|			TimeGravityAcc-Std-X
+45 |	tGravityAcc-std()-Y		|			TimeGravityAcc-Std-Y
+46 |	tGravityAcc-std()-Z		|			TimeGravityAcc-Std-Z
 81 |	tBodyAccJerk-mean()-X	|			TimeBodyAccJerk-Mean-X
 82 |	tBodyAccJerk-mean()-Y	|			TimeBodyAccJerk-Mean-Y
 83 |	tBodyAccJerk-mean()-Z	|			TimeBodyAccJerk-Mean-Z
 84 |	tBodyAccJerk-std()-X		|		TimeBodyAccJerk-Std-X
 85 |	tBodyAccJerk-std()-Y		|		TimeBodyAccJerk-Std-Y
 86 |	tBodyAccJerk-std()-Z		|		TimeBodyAccJerk-Std-Z
-121 |	tBodyGyro-mean()-X		|		TimeBodyGyro-Mean-X
-122 |	tBodyGyro-mean()-Y		|		TimeBodyGyro-Mean-Y
-123 |	tBodyGyro-mean()-Z		|		TimeBodyGyro-Mean-Z
-124 |	tBodyGyro-std()-X		|		TimeBodyGyro-Std-X
-125 |	tBodyGyro-std()-Y		|		TimeBodyGyro-Std-Y
-126 |	tBodyGyro-std()-Z		|		TimeBodyGyro-Std-Z
-161 |	tBodyGyroJerk-mean()-X	|		TimeBodyGyroJerk-Mean-X
-162 |	tBodyGyroJerk-mean()-Y	|		TimeBodyGyroJerk-Mean-Y
-163 |	tBodyGyroJerk-mean()-Z	|		TimeBodyGyroJerk-Mean-Z
-164 |	tBodyGyroJerk-std()-X	|		TimeBodyGyroJerk-Std-X
-165 |	tBodyGyroJerk-std()-Y	|		TimeBodyGyroJerk-Std-Y
-166 |	tBodyGyroJerk-std()-Z	|		TimeBodyGyroJerk-Std-Z
-201 |	tBodyAccMag-mean()		|		TimeBodyAccMag-Mean
-202 |	tBodyAccMag-std()		|		TimeBodyAccMag-Std
-214 |	tGravityAccMag-mean()	|		TimeGravityAccMag-Mean
+121 |	tBodyGyro-mean()-X		|			TimeBodyGyro-Mean-X
+122 |	tBodyGyro-mean()-Y		|			TimeBodyGyro-Mean-Y
+123 |	tBodyGyro-mean()-Z		|			TimeBodyGyro-Mean-Z
+124 |	tBodyGyro-std()-X		|			TimeBodyGyro-Std-X
+125 |	tBodyGyro-std()-Y		|			TimeBodyGyro-Std-Y
+126 |	tBodyGyro-std()-Z		|			TimeBodyGyro-Std-Z
+161 |	tBodyGyroJerk-mean()-X	|			TimeBodyGyroJerk-Mean-X
+162 |	tBodyGyroJerk-mean()-Y	|			TimeBodyGyroJerk-Mean-Y
+163 |	tBodyGyroJerk-mean()-Z	|			TimeBodyGyroJerk-Mean-Z
+164 |	tBodyGyroJerk-std()-X	|			TimeBodyGyroJerk-Std-X
+165 |	tBodyGyroJerk-std()-Y	|			TimeBodyGyroJerk-Std-Y
+166 |	tBodyGyroJerk-std()-Z	|			TimeBodyGyroJerk-Std-Z
+201 |	tBodyAccMag-mean()		|			TimeBodyAccMag-Mean
+202 |	tBodyAccMag-std()		|			TimeBodyAccMag-Std
+214 |	tGravityAccMag-mean()	|			TimeGravityAccMag-Mean
 215 |	tGravityAccMag-std()	|			TimeGravityAccMag-Std
-227 |	tBodyAccJerkMag-mean()	|		TimeBodyAccJerkMag-Mean
-228 |	tBodyAccJerkMag-std()	|		TimeBodyAccJerkMag-Std
-240 |	tBodyGyroMag-mean()		|		TimeBodyGyroMag-Mean
-241 |	tBodyGyroMag-std()		|		TimeBodyGyroMag-Std
-253 |	tBodyGyroJerkMag-mean()	|		TimeBodyGyroJerkMag-Mean
-254 |	tBodyGyroJerkMag-std()	|		TimeBodyGyroJerkMag-Std
-266 |	fBodyAcc-mean()-X		|		FreqBodyAcc-Mean-X
-267 |	fBodyAcc-mean()-Y		|		FreqBodyAcc-Mean-Y
-268 |	fBodyAcc-mean()-Z		|		FreqBodyAcc-Mean-Z
+227 |	tBodyAccJerkMag-mean()	|			TimeBodyAccJerkMag-Mean
+228 |	tBodyAccJerkMag-std()	|			TimeBodyAccJerkMag-Std
+240 |	tBodyGyroMag-mean()		|			TimeBodyGyroMag-Mean
+241 |	tBodyGyroMag-std()		|			TimeBodyGyroMag-Std
+253 |	tBodyGyroJerkMag-mean()	|			TimeBodyGyroJerkMag-Mean
+254 |	tBodyGyroJerkMag-std()	|			TimeBodyGyroJerkMag-Std
+266 |	fBodyAcc-mean()-X		|			FreqBodyAcc-Mean-X
+267 |	fBodyAcc-mean()-Y		|			FreqBodyAcc-Mean-Y
+268 |	fBodyAcc-mean()-Z		|			FreqBodyAcc-Mean-Z
 269 |	fBodyAcc-std()-X		|			FreqBodyAcc-Std-X
 270 |	fBodyAcc-std()-Y		|			FreqBodyAcc-Std-Y
 271 |	fBodyAcc-std()-Z		|			FreqBodyAcc-Std-Z
-345 |	fBodyAccJerk-mean()-X	|		FreqBodyAccJerk-Mean-X
-346 |	fBodyAccJerk-mean()-Y	|		FreqBodyAccJerk-Mean-Y
-347 |	fBodyAccJerk-mean()-Z	|		FreqBodyAccJerk-Mean-Z
+345 |	fBodyAccJerk-mean()-X	|			FreqBodyAccJerk-Mean-X
+346 |	fBodyAccJerk-mean()-Y	|			FreqBodyAccJerk-Mean-Y
+347 |	fBodyAccJerk-mean()-Z	|			FreqBodyAccJerk-Mean-Z
 348 |	fBodyAccJerk-std()-X	|			FreqBodyAccJerk-Std-X
 349 |	fBodyAccJerk-std()-Y	|			FreqBodyAccJerk-Std-Y
 350 |	fBodyAccJerk-std()-Z	|			FreqBodyAccJerk-Std-Z
-424 |	fBodyGyro-mean()-X		|		FreqBodyGyro-Mean-X
-425 |	fBodyGyro-mean()-Y		|		FreqBodyGyro-Mean-Y
-426 |	fBodyGyro-mean()-Z		|		FreqBodyGyro-Mean-Z
-427 |	fBodyGyro-std()-X		|		FreqBodyGyro-Std-X
-428 |	fBodyGyro-std()-Y		|		FreqBodyGyro-Std-Y
-429 |	fBodyGyro-std()-Z		|		FreqBodyGyro-Std-Z
-503 |	fBodyAccMag-mean()		|		FreqBodyAccMag-Mean
-504 |	fBodyAccMag-std()		|		FreqBodyAccMag-Std
-516 |	fBodyBodyAccJerkMag-mean()|		FreqBodyAccJerkMag-Mean
-517 |	fBodyBodyAccJerkMag-std()	|	FreqBodyAccJerkMag-Std
-529 |	fBodyBodyGyroMag-mean()		|	FreqBodyGyroMag-Mean
-530 |	fBodyBodyGyroMag-std()		|	FreqBodyGyroMag-Std
+424 |	fBodyGyro-mean()-X		|			FreqBodyGyro-Mean-X
+425 |	fBodyGyro-mean()-Y		|			FreqBodyGyro-Mean-Y
+426 |	fBodyGyro-mean()-Z		|			FreqBodyGyro-Mean-Z
+427 |	fBodyGyro-std()-X		|			FreqBodyGyro-Std-X
+428 |	fBodyGyro-std()-Y		|			FreqBodyGyro-Std-Y
+429 |	fBodyGyro-std()-Z		|			FreqBodyGyro-Std-Z
+503 |	fBodyAccMag-mean()		|			FreqBodyAccMag-Mean
+504 |	fBodyAccMag-std()		|			FreqBodyAccMag-Std
+516 |	fBodyBodyAccJerkMag-mean()|			FreqBodyAccJerkMag-Mean
+517 |	fBodyBodyAccJerkMag-std()		|	FreqBodyAccJerkMag-Std
+529 |	fBodyBodyGyroMag-mean()			|	FreqBodyGyroMag-Mean
+530 |	fBodyBodyGyroMag-std()			|	FreqBodyGyroMag-Std
 542 |	fBodyBodyGyroJerkMag-mean()|		FreqBodyGyroJerkMag-Mean
-543 |	fBodyBodyGyroJerkMag-std()|		FreqBodyGyroJerkMag-Std
+543 |	fBodyBodyGyroJerkMag-std()|			FreqBodyGyroJerkMag-Std
 
 
 
@@ -739,3 +756,79 @@ VolunteerID			Volunteer Identifying Number/Code. Unique number to identify each 
 				files (y_test.txt and y_train.txt)
 ActivityName			Description of Activity (as provided in the raw data file activity_labels.txt)
 
+
+Tidy`_`Set`_`Q5 - Final Submission of Tidy Data Set for Assignment
+------------------------------------------------------------------
+
+####Variables defined in the **Tidy`_`Set`_`Q5** dataframe:
+
+Column #    | Variable Name
+------------|-------------------
+1	| VolunteerID
+2	| ActivityName
+3	| TimeBodyAcc-Mean-X
+4	| TimeBodyAcc-Mean-Y
+5	| TimeBodyAcc-Mean-Z
+6	| TimeBodyAcc-Std-X
+7	| TimeBodyAcc-Std-Y
+8	| TimeBodyAcc-Std-Z
+9	| TimeGravityAcc-Mean-X
+10	| TimeGravityAcc-Mean-Y
+11	| TimeGravityAcc-Mean-Z
+12	| TimeGravityAcc-Std-X
+13	| TimeGravityAcc-Std-Y
+14	| TimeGravityAcc-Std-Z
+15	| TimeBodyAccJerk-Mean-X
+16	| TimeBodyAccJerk-Mean-Y
+17	| TimeBodyAccJerk-Mean-Z
+18	| TimeBodyAccJerk-Std-X
+19	| TimeBodyAccJerk-Std-Y
+20	| TimeBodyAccJerk-Std-Z
+21	| TimeBodyGyro-Mean-X
+22	| TimeBodyGyro-Mean-Y
+23	| TimeBodyGyro-Mean-Z
+24	| TimeBodyGyro-Std-X
+25	| TimeBodyGyro-Std-Y
+26	| TimeBodyGyro-Std-Z
+27	| TimeBodyGyroJerk-Mean-X
+28	| TimeBodyGyroJerk-Mean-Y
+29	| TimeBodyGyroJerk-Mean-Z
+30	| TimeBodyGyroJerk-Std-X
+31	| TimeBodyGyroJerk-Std-Y
+32	| TimeBodyGyroJerk-Std-Z
+33	| TimeBodyAccMag-Mean
+34	| TimeBodyAccMag-Std
+35	| TimeGravityAccMag-Mean
+36	| TimeGravityAccMag-Std
+37	| TimeBodyAccJerkMag-Mean
+38	| TimeBodyAccJerkMag-Std
+39	| TimeBodyGyroMag-Mean
+40	| TimeBodyGyroMag-Std
+41	| TimeBodyGyroJerkMag-Mean
+42	| TimeBodyGyroJerkMag-Std
+43	| FreqBodyAcc-Mean-X
+44	| FreqBodyAcc-Mean-Y
+45	| FreqBodyAcc-Mean-Z
+46	| FreqBodyAcc-Std-X
+47	| FreqBodyAcc-Std-Y
+48	| FreqBodyAcc-Std-Z
+49	| FreqBodyAccJerk-Mean-X
+50	| FreqBodyAccJerk-Mean-Y
+51	| FreqBodyAccJerk-Mean-Z
+52	| FreqBodyAccJerk-Std-X
+53	| FreqBodyAccJerk-Std-Y
+54	| FreqBodyAccJerk-Std-Z
+55	| FreqBodyGyro-Mean-X
+56	| FreqBodyGyro-Mean-Y
+57	| FreqBodyGyro-Mean-Z
+58	| FreqBodyGyro-Std-X
+59	| FreqBodyGyro-Std-Y
+60	| FreqBodyGyro-Std-Z
+61	| FreqBodyAccMag-Mean
+62	| FreqBodyAccMag-Std
+63	| FreqBodyAccJerkMag-Mean
+64	| FreqBodyAccJerkMag-Std
+65	| FreqBodyGyroMag-Mean
+66	| FreqBodyGyroMag-Std
+67	| FreqBodyGyroJerkMag-Mean
+68	| FreqBodyGyroJerkMag-Std
