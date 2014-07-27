@@ -103,12 +103,11 @@ Item # | File Name	             | Description
 
 
 ###Introduction:
-Before running the script run_analysis.R - PLEASE NOTE: The script assumes the      existence of E:\ drive on windows machine.
-Also, all path to files and directories/folders assume windows working environment.
+Before running the script run_analysis.R - **PLEASE NOTE:** The script assumes the presence of E:\ drive on windows machine. Also, all files and directory specifications follow the windows environment.
 
-The run_analysis.R script is the only thing required to create a tidy data set for this assignment. The R script can be placed in any directory of any of the storage devices. The script will create all the required directories, download and unzip the zip files and process them into a tidy data set. The tidy data set in R is a dataframe named Tidy_Set_Q5 which is written out to the two files: Tidy_Set_Q5.csv and Tidy_Set_Q5_table.txt using write.csv and write.table functions.
+The run_analysis.R script is the only thing required to create a tidy data set for this assignment. The R script can be placed in any directory of any of the storage device on the local machine. The script will create all the required directories, download and unzip the zip files and finally create a tidy data set. The tidy data set in R is a dataframe named Tidy_Set_Q5 which is written out to the two files: Tidy_Set_Q5.csv and Tidy_Set_Q5_table.txt using write.csv and write.table functions.
 
-Reading the tidy data set files:
+**Reading the tidy data set files:**
 
 The file Tidy_Set_Q5_table.txt can easily be read back into R using read.table function, while the Tidy_Set_Q5.csv file can be read into R using the read.csv function.
 Both files have "header" row that contains the column/variable names.
@@ -116,39 +115,22 @@ The data in the files is sorted by the VolunteerID and ActivityName, which are i
 
 ###################################################################################################
 
-my notes:
-
-30 volunteers/candidates: 70% of whom were selected for generating training and 30% for generating test data
-70% of 30 = 21 (nrow of training_count) and 30% of 30 = 9 (nrow of test_count)
-
-
-
-all observations of the test volunteers are recorded in the test_X 
-all activity codes by the test volunteers are recorded in the test_y files
-all observations of the training volunteers are recorded in the train_X
-all activity codes by the training volunteers are recorded in the train_y files
-
-activity codes and their description are given in the activity_labels.txt file
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING
-
-
 
 Pre-processing checks
 ======================
-To confirm the validity of data, I checked that # of observations in the train_(X and y).txt files matched the # of observations in the subject_train.txt file. Likewise # of observations in the test_(X and y) files matched that in the subject_test.txt file
+To confirm the validity of data, I ensured the number of observations in the train`_`(X and y).txt files matched the number of observations in the subject`_`train.txt file. Likewise the number of observations in the test`_`(X and y) files matched that in the subject`_`test.txt file
+
+I also verified the volunteer ID values were between 1 and 30 (as the total number of participants was 30 with 21 being training and 9 being test volunteers)
+
+Similarly the activity codes were verified to be between the values of 1 and 6.
 
 
-### These files are required by the run_analysis.R script and are part of the zip file downloaded from the source.
+### The following files are required by the run_analysis.R script and are part of the zip file downloaded from the source.
 
-Directory	| File Name		| Description
-------------|---------------|--------------------------
+Directory   	| File Name 		| Description
+---------------------------|--------------------|--------------------------
 UCI HAR Dataset | 'features.txt'| List of all features.
-UCI HAR Dataset | 'activity_labels.txt': Links the class labels with their activity name.
+UCI HAR Dataset | 'activity_labels.txt' ! Links the class labels with their activity name.
 UCI HAR Dataset\train | 'X_train.txt'| Training set.
 UCI HAR Dataset\train | 'y_train.txt'| Training labels.
 UCI HAR Dataset\train | 'subject_train.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
@@ -158,7 +140,7 @@ UCI HAR Dataset\test | 'subject_test.txt'| Each row identifies the subject who p
 
 
 # run_analysis.R script
-### Complete step by step execution of the run_Analysis.R script.
+#####Below is a complete step by step execution of the run`_`Analysis.R script. As mentioned earlier, the script creates all the necessary folder/directory structures on E:\ drive and downloads all the files and unzips them maintaining the folder structure of the original dataset. The final output of this script are two files (Tidy`_`Set`_`Q5`_`tables.txt and Tidy`_`Set`_`Q5.csv) in the default working directory defined in the script. 
 
 1. 
 1.  ## save the current directory
