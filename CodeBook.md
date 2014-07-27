@@ -1,16 +1,83 @@
 ####Document file name: CodeBook.md
 ####Author: 	Mohsin Jessa
 ####Date: 		July 24, 2014 
-####Version:	V1.5
+####Version:	V1.6
 
 **This code book describes the variable names, data transformations or other processing work that I performed in order to produce a tidy dataset for this assignment.**
 
-The data for this assignment was part of an experiment, details of which can be found [**here.**](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones )
 
-The data was downloaded from the following: [**Data Source.** ](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+mad(): Median absolute deviation 
+max(): Largest value in array
+min(): Smallest value in array
+sma(): Signal magnitude area
+energy(): Energy measure. Sum of the squares divided by the number of values. 
+iqr(): Interquartile range 
+entropy(): Signal entropy
+arCoeff(): Autorregresion coefficients with Burg order equal to 4
+correlation(): correlation coefficient between two signals
+maxInds(): index of the frequency component with largest magnitude
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+skewness(): skewness of the frequency domain signal 
+kurtosis(): kurtosis of the frequency domain signal 
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+angle(): Angle between to vectors.
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+The complete list of variables of each feature vector is available in 'features.txt'
 
 
-###Input data set:
+
+
+Assignment Specific Information:
+================================
+
+The data for this assignment was part of an experiment, details of which can be found [**here.**](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones ) and was downloaded from the following [**Data Source.** ](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
+
+The variables used in the raw data downloaded from the source was explained earlier in this document.
+
+
+###Input data set - list of filenames used in this assignment:
 
 - activity_labels.txt
 - features.txt
@@ -22,8 +89,9 @@ The data was downloaded from the following: [**Data Source.** ](https://d396qusz
 - y_train.txt
 
 
-###Output Tidy Data: 
+###Output of this assignment is a Tidy Data Set written out to the file: 
 - Tidy_Set_Q5_table.txt
+
 
 
 ##Activity Data: (activity_labels.txt)
@@ -676,8 +744,21 @@ tBodyGyroJerkMean
 
 
 
-***The following table shows variables that were extracted to complete the final part of this assignment from the original dataset.***
+***The following table shows variables that were extracted from the original dataset (features.txt) and the X_train/test.txt files to complete the final part of this assignment from the original dataset.***
 
+
+#####For Part 2 of the assignment we were asked to " Extract only the measurements on the mean and standard deviation for each measurement. " 
+For that, the variables I selected were those with either "mean" or "std" mentioned in their names. The variable names were cleaned and made more readable by performing the following:
+-	removing all the "()"
+-	multiple "." were replaced with a single "-"
+-	"t" in the beginning of the name was replaced with "Time"
+-	"f" in the beginning of the name was replaced with "Freq"
+-	"mean" was replaced with "Mean"
+-	"std" was replaced with "Std"
+
+These variable names where then averaged for each activity performed by each volunteer/subject. Since each volunteer performed all the activities (a total of 6 different activities) and there being 30 volunteers (21 training and 9 test volunteers) we ended up with a total of 180 observations in the final "tidy" version of the dataset.
+
+The "cleaned" variable names and their original form are shown in the table below.
 
 Column position in original dataset | Original Variable Names     	|Revised Descriptive Variable Names
 --------------------|--------------------------------|-----------------------------------------
@@ -752,9 +833,15 @@ Column position in original dataset | Original Variable Names     	|Revised Desc
 
 In addition: Two new variables were introduced in the Tidy Data Set:
 
-VolunteerID			Volunteer Identifying Number/Code. Unique number to identify each Volunteer (as provided in the raw data 							
-				files (y_test.txt and y_train.txt)
-ActivityName			Description of Activity (as provided in the raw data file activity_labels.txt)
+- VolunteerID			Volunteer Identifying Number/Code. Unique number between 1 and 30 to identify each Volunteer (as provided in the raw data files y_test.txt and y_train.txt)
+- ActivityName			Description of Activity (as provided in the raw data file activity_labels.txt). 6 values between (1-6) with following description
+  - 1 WALKING
+  - 2 WALKING_UPSTAIRS
+  - 3 WALKING_DOWNSTAIRS
+  - 4 SITTING
+  - 5 STANDING
+  - 6 LAYING
+ 
 
 
 Tidy`_`Set`_`Q5 - Final Submission of Tidy Data Set for Assignment
@@ -762,73 +849,73 @@ Tidy`_`Set`_`Q5 - Final Submission of Tidy Data Set for Assignment
 
 ####Variables defined in the **Tidy`_`Set`_`Q5** dataframe:
 
-Column #    | Variable Name
-------------|-------------------
-1	| VolunteerID
-2	| ActivityName
-3	| TimeBodyAcc-Mean-X
-4	| TimeBodyAcc-Mean-Y
-5	| TimeBodyAcc-Mean-Z
-6	| TimeBodyAcc-Std-X
-7	| TimeBodyAcc-Std-Y
-8	| TimeBodyAcc-Std-Z
-9	| TimeGravityAcc-Mean-X
-10	| TimeGravityAcc-Mean-Y
-11	| TimeGravityAcc-Mean-Z
-12	| TimeGravityAcc-Std-X
-13	| TimeGravityAcc-Std-Y
-14	| TimeGravityAcc-Std-Z
-15	| TimeBodyAccJerk-Mean-X
-16	| TimeBodyAccJerk-Mean-Y
-17	| TimeBodyAccJerk-Mean-Z
-18	| TimeBodyAccJerk-Std-X
-19	| TimeBodyAccJerk-Std-Y
-20	| TimeBodyAccJerk-Std-Z
-21	| TimeBodyGyro-Mean-X
-22	| TimeBodyGyro-Mean-Y
-23	| TimeBodyGyro-Mean-Z
-24	| TimeBodyGyro-Std-X
-25	| TimeBodyGyro-Std-Y
-26	| TimeBodyGyro-Std-Z
-27	| TimeBodyGyroJerk-Mean-X
-28	| TimeBodyGyroJerk-Mean-Y
-29	| TimeBodyGyroJerk-Mean-Z
-30	| TimeBodyGyroJerk-Std-X
-31	| TimeBodyGyroJerk-Std-Y
-32	| TimeBodyGyroJerk-Std-Z
-33	| TimeBodyAccMag-Mean
-34	| TimeBodyAccMag-Std
-35	| TimeGravityAccMag-Mean
-36	| TimeGravityAccMag-Std
-37	| TimeBodyAccJerkMag-Mean
-38	| TimeBodyAccJerkMag-Std
-39	| TimeBodyGyroMag-Mean
-40	| TimeBodyGyroMag-Std
-41	| TimeBodyGyroJerkMag-Mean
-42	| TimeBodyGyroJerkMag-Std
-43	| FreqBodyAcc-Mean-X
-44	| FreqBodyAcc-Mean-Y
-45	| FreqBodyAcc-Mean-Z
-46	| FreqBodyAcc-Std-X
-47	| FreqBodyAcc-Std-Y
-48	| FreqBodyAcc-Std-Z
-49	| FreqBodyAccJerk-Mean-X
-50	| FreqBodyAccJerk-Mean-Y
-51	| FreqBodyAccJerk-Mean-Z
-52	| FreqBodyAccJerk-Std-X
-53	| FreqBodyAccJerk-Std-Y
-54	| FreqBodyAccJerk-Std-Z
-55	| FreqBodyGyro-Mean-X
-56	| FreqBodyGyro-Mean-Y
-57	| FreqBodyGyro-Mean-Z
-58	| FreqBodyGyro-Std-X
-59	| FreqBodyGyro-Std-Y
-60	| FreqBodyGyro-Std-Z
-61	| FreqBodyAccMag-Mean
-62	| FreqBodyAccMag-Std
-63	| FreqBodyAccJerkMag-Mean
-64	| FreqBodyAccJerkMag-Std
-65	| FreqBodyGyroMag-Mean
-66	| FreqBodyGyroMag-Std
-67	| FreqBodyGyroJerkMag-Mean
-68	| FreqBodyGyroJerkMag-Std
+Column #    | Variable Name  |  Values or EXplanation
+------------|----------------|------------------------
+1	| VolunteerID	|	Range of values between 1-30
+2	| ActivityName	|	Code values between 1-6. Description as explained in the file activity_labels.txt
+3	| TimeBodyAcc-Mean-X	|
+4	| TimeBodyAcc-Mean-Y	|
+5	| TimeBodyAcc-Mean-Z	|
+6	| TimeBodyAcc-Std-X		|
+7	| TimeBodyAcc-Std-Y		|
+8	| TimeBodyAcc-Std-Z		|
+9	| TimeGravityAcc-Mean-X	|
+10	| TimeGravityAcc-Mean-Y	|
+11	| TimeGravityAcc-Mean-Z	|
+12	| TimeGravityAcc-Std-X	|
+13	| TimeGravityAcc-Std-Y	|
+14	| TimeGravityAcc-Std-Z	|
+15	| TimeBodyAccJerk-Mean-X	|
+16	| TimeBodyAccJerk-Mean-Y	|
+17	| TimeBodyAccJerk-Mean-Z	|
+18	| TimeBodyAccJerk-Std-X		|
+19	| TimeBodyAccJerk-Std-Y		|
+20	| TimeBodyAccJerk-Std-Z		|
+21	| TimeBodyGyro-Mean-X		|
+22	| TimeBodyGyro-Mean-Y		|
+23	| TimeBodyGyro-Mean-Z		|
+24	| TimeBodyGyro-Std-X		|
+25	| TimeBodyGyro-Std-Y		|
+26	| TimeBodyGyro-Std-Z		|
+27	| TimeBodyGyroJerk-Mean-X	|
+28	| TimeBodyGyroJerk-Mean-Y	|
+29	| TimeBodyGyroJerk-Mean-Z	|
+30	| TimeBodyGyroJerk-Std-X	|
+31	| TimeBodyGyroJerk-Std-Y	|
+32	| TimeBodyGyroJerk-Std-Z	|
+33	| TimeBodyAccMag-Mean		|
+34	| TimeBodyAccMag-Std		|
+35	| TimeGravityAccMag-Mean	|
+36	| TimeGravityAccMag-Std		|
+37	| TimeBodyAccJerkMag-Mean	|
+38	| TimeBodyAccJerkMag-Std	|
+39	| TimeBodyGyroMag-Mean		|
+40	| TimeBodyGyroMag-Std		|
+41	| TimeBodyGyroJerkMag-Mean	|
+42	| TimeBodyGyroJerkMag-Std	|
+43	| FreqBodyAcc-Mean-X		|
+44	| FreqBodyAcc-Mean-Y		|
+45	| FreqBodyAcc-Mean-Z		|
+46	| FreqBodyAcc-Std-X			|
+47	| FreqBodyAcc-Std-Y			|
+48	| FreqBodyAcc-Std-Z			|
+49	| FreqBodyAccJerk-Mean-X	|
+50	| FreqBodyAccJerk-Mean-Y	|
+51	| FreqBodyAccJerk-Mean-Z	|
+52	| FreqBodyAccJerk-Std-X		|
+53	| FreqBodyAccJerk-Std-Y		|
+54	| FreqBodyAccJerk-Std-Z		|
+55	| FreqBodyGyro-Mean-X		|
+56	| FreqBodyGyro-Mean-Y		|
+57	| FreqBodyGyro-Mean-Z		|
+58	| FreqBodyGyro-Std-X		|
+59	| FreqBodyGyro-Std-Y		|
+60	| FreqBodyGyro-Std-Z		|
+61	| FreqBodyAccMag-Mean		|
+62	| FreqBodyAccMag-Std		|
+63	| FreqBodyAccJerkMag-Mean	|
+64	| FreqBodyAccJerkMag-Std	|
+65	| FreqBodyGyroMag-Mean		|
+66	| FreqBodyGyroMag-Std		|
+67	| FreqBodyGyroJerkMag-Mean	|
+68	| FreqBodyGyroJerkMag-Std	|
