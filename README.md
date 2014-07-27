@@ -9,7 +9,7 @@ Peer Assignment for Getting and Cleaning Data - Course Project
 
 
 ####	Name:		Mohsin Jessa
-####	Date:		24-Jul-2014 V1.4
+####	Date:		24-Jul-2014 V1.5
 ####	Course:		Getting and Cleaning Data
 ####	Project: 	Peer review and course assignment
 
@@ -91,7 +91,8 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
 
 # Assignment specific information:
 
-I have submitted the following five files to the github repo at the following URL: https://github.com/MoJeeza/Getting-and-Cleaning-Data-Assignment.git
+As part of this assignment, I have submitted five files to the [**github repo**](https://github.com/MoJeeza/Getting-and-Cleaning-Data-Assignment.git) 
+
 
 Item # | File Name	             | Description
 -------|-------------------------|------------------------------------------------
@@ -113,9 +114,6 @@ The file Tidy_Set_Q5_table.txt can easily be read back into R using read.table f
 Both files have "header" row that contains the column/variable names.
 The data in the files is sorted by the VolunteerID and ActivityName, which are in the two leftmost columns.
 
-###################################################################################################
-
-
 Pre-processing checks
 ======================
 To confirm the validity of data, I ensured the number of observations in the train`_`(X and y).txt files matched the number of observations in the subject`_`train.txt file. Likewise the number of observations in the test`_`(X and y) files matched that in the subject`_`test.txt file
@@ -125,21 +123,21 @@ I also verified the volunteer ID values were between 1 and 30 (as the total numb
 Similarly the activity codes were verified to be between the values of 1 and 6.
 
 
-### The following files are required by the run_analysis.R script and are part of the zip file downloaded from the source.
+### The following files are required by the run_analysis.R script and are part of the zip file downloaded from the source of dataset.
 
-Directory   	| File Name 		| Description
----------------------------|--------------------|--------------------------
-UCI HAR Dataset | 'features.txt'| List of all features.
-UCI HAR Dataset | 'activity_labels.txt' ! Links the class labels with their activity name.
-UCI HAR Dataset\train | 'X_train.txt'| Training set.
-UCI HAR Dataset\train | 'y_train.txt'| Training labels.
-UCI HAR Dataset\train | 'subject_train.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-UCI HAR Dataset\test | 'X_test.txt' | Test set.
-UCI HAR Dataset\test | 'y_test.txt' | Test labels.
-UCI HAR Dataset\test | 'subject_test.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+Directory   	           | File Name 	   | Description
+---------------------------|---------------|--------------------------
+UCI HAR Dataset         | 'features.txt'| List of all features.
+UCI HAR Dataset         | 'activity_labels.txt' | Links the class labels with their activity name.
+UCI HAR Dataset\train   | 'X_train.txt'| Training set.
+UCI HAR Dataset\train   | 'y_train.txt'| Training labels.
+UCI HAR Dataset\train   | 'subject_train.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+UCI HAR Dataset\test    | 'X_test.txt' | Test set.
+UCI HAR Dataset\test    | 'y_test.txt' | Test labels.
+UCI HAR Dataset\test    | 'subject_test.txt'| Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 
-# run_analysis.R script
+# Execution of run_analysis.R script
 #####Below is a complete step by step execution of the run`_`Analysis.R script. As mentioned earlier, the script creates all the necessary folder/directory structures on E:\ drive and downloads all the files and unzips them maintaining the folder structure of the original dataset. The final output of this script are two files (Tidy`_`Set`_`Q5`_`tables.txt and Tidy`_`Set`_`Q5.csv) in the default working directory defined in the script. 
 
 1. 
