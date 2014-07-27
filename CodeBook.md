@@ -853,7 +853,7 @@ Tidy`_`Set`_`Q5 - Final Submission of Tidy Data Set for Assignment
 Column #    | Variable Name             |Values or Explanation
 ------------|---------------------------|------------------------
 1	| VolunteerID	              | Range of values between 1-30
-2	| ActivityName	              | Code values between 1-6. Description as explained in the file activity_labels.txt
+2	| ActivityName	              | Activity description . Description as explained in the file activity_labels.txt
 3	| TimeBodyAcc-Mean-X	          | The rest of the values are the mean values for all observations for a given participant for each activity he performed.
 4	| TimeBodyAcc-Mean-Y	      |
 5	| TimeBodyAcc-Mean-Z	      |
